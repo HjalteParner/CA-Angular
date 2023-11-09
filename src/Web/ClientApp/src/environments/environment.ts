@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  text: 'This is development environment'
+  text: 'This is development or staging environment'
 };
 
 /*

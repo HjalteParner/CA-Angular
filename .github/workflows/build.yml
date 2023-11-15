@@ -43,8 +43,6 @@ jobs:
 
     - name: Install .NET
       uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '8.0.100-preview.7.23376.3'
 
     - name: Restore solution
       run: dotnet restore
@@ -75,7 +73,7 @@ jobs:
       if: ${{ inputs.build-artifacts == true }}
       run: |
         dotnet new tool-manifest
-        dotnet tool install dotnet-ef --version 8.0.0-preview.7.23375.4
+        dotnet tool install dotnet-ef
         dotnet ef migrations bundle --configuration Release -p ./src/Infrastructure/ -s ./src/Web/ -o efbundle.exe
         zip -r ./efbundle.zip efbundle.exe
       env:

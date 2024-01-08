@@ -5,6 +5,11 @@
     "title": "CA_Angular API",
     "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "/ca"
+    }
+  ],
   "paths": {
     "/api/TodoItems": {
       "get": {

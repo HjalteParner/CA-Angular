@@ -43,6 +43,8 @@ public static class DependencyInjection
         {
             configure.Title = "CA_Angular API";
 
+            configure.PostProcess = d => { d.BasePath = "/ca"; };
+
             // Add the fluent validations schema processor
             var fluentValidationSchemaProcessor = 
                 sp.CreateScope().ServiceProvider.GetRequiredService<FluentValidationSchemaProcessor>();
